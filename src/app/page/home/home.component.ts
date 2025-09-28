@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {RouterLink} from '@angular/router';
+import {FileService} from '../../shared/file/file.service';
 
 @Component({
   selector: 'app-home',
@@ -13,5 +14,9 @@ import {RouterLink} from '@angular/router';
   }
 })
 export class HomeComponent {
+  private readonly fileService = inject(FileService);
 
+  openTechTask(): void {
+    this.fileService.openFileInNewWindow('assets/files/techTask.pdf', 'tz');
+  }
 }

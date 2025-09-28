@@ -5,8 +5,13 @@
   justify-content: center;
   align-items: center;
 }
-.footer-container{
+.side-container{
   display: flex;
   flex-grow: 0;
   justify-content: center;
+}
+.icon-pdf{
+  margin: 0.5rem;
+  width: 70px;
+  cursor: pointer;
 }

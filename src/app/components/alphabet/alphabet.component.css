@@ -1,5 +1,5 @@
 .abc-container{
-  border: 2px solid #abd0d4;
+  border: 2px solid rgba(55, 111, 255, 0.39);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

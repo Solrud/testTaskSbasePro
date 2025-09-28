@@ -1,59 +1,66 @@
-# TestFromSbaseProABC
+## Веб-приложение "Сервис по изучению алфавита" 🚀
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.17.
+**Мини-приложение "Сервис по изучению алфавита"**  
+Описание задания:  
+Цель: Разработать SPA-приложение для изучения алфавита с интерактивными упражнениями.
 
-## Development server
+Основные требования:
+- Главная страница (/)
+- Кнопка "Начать" для перехода к обучению
+- Страница обучения (/challenge/:letter)
+- Блок буквы - отображение текущей буквы с картинкой
+- Блок задания - слово с поиском буквы + проверка ответов
+- Блок алфавита - навигация по буквам с выделением активной
 
-To start a local development server, run:
+## 🛠️ Cтек
+    angular/core: 19.2.0
+    typescript: 5.7.2
+    CSS 3
+    HTML 5
+    Intellij IDEA v.2024.3
 
-```bash
-ng serve
-```
+## 💡 Инструкция по запуску приложения
+Для корректной работы и запуска данного Angular 19 приложения выполните следующие шаги:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 1. Требования к окружению
+- **IDE с поддержкой локального сервера**  
+  Рекомендуется использовать современную IDE, например **IntelliJ IDEA**, которая поддерживает запуск локального сервера и интеграцию с Node.js.
+- **Node.js**  
+  Необходима установленная версия Node.js одной из версий:
+  - ^18.19.1
+  - ^20.11.1
+  - ^22.0.0
 
-## Code scaffolding
+### 2. Установка зависимостей
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Откройте проект в вашей IDE.
+2. Откройте терминал в корневой директории приложения.
+3. Выполните команду для установки зависимостей:
+   ```bash
+   npm ci
+   ```
+### 3. Запуск приложения
+Для запуска приложения используйте вашу IDE.   
+В IntelliJ IDEA используйте сочетание клавиш Shift + F10 для запуска локального сервера. Либо выполните команду в терминале с помощью Angular CLI:
+   ```bash
+    ng serve
+   ```
+### 4. Примечание
+После запуска приложение будет доступно по адресу:
+http://localhost:4200.
 
-```bash
-ng generate component component-name
-```
+### 5. Общий вид ПО
+<div align="center">
+   <img src="public/assets/readme/app-desk-home.png" width="500px" alt="Project Logo" />
+    <h4>Стартовая страница</h4>
+</div>
+<div align="center">
+   <img src="public/assets/readme/app-desk-alphabet.png" width="500px" alt="Project Logo" />
+    <h4>Страница с заданием</h4>
+</div>
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔗 Ссылки
+### Ссылка протестить это ПО (без SSL) : http://abc.mattheweb.ru  
+[![devSite](https://img.shields.io/badge/Site-mattheweb.ru-3C517C?logo=monster)](https://mattheweb.ru/git-badges-readme-testTask-sbase-pro)  
+[![tg](https://img.shields.io/badge/Telegram-@rudalsmolyusr-27a7e7?logo=telegram)](https://t.me/rudalsmolyusr)  
+[![gitHub](https://img.shields.io/badge/GitHub-Solrud-blue?logo=github)](https://github.com/Solrud)
