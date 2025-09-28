@@ -1,0 +1,12 @@
+.greeting-container{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container{
+  display: flex;
+  flex-grow: 0;
+  justify-content: center;
+}

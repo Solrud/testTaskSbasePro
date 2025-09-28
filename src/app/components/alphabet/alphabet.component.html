@@ -1,0 +1,7 @@
+<div class="abc-container">
+  @for (letter of alphabetList(); track letter.id) {
+    <span class="letter"
+          [class.correct-letter]="isLetterCorrect(letter.latinLetter)"
+          [routerLink]="['/challenge', letter.latinLetter]">{{ letter.cyrillicLetter }}</span>
+  }
+</div>

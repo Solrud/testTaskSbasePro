@@ -1,0 +1,22 @@
+.main-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+}
+.icon-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .icon-back{
+    width: 50px;
+  }
+}

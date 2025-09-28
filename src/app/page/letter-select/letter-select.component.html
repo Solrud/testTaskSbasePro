@@ -1,0 +1,37 @@
+@if (errorMessage(); as errorMsg) {
+  <h1>{{ errorMsg }}</h1>
+} @else {
+  <ng-container [ngTemplateOutlet]="letterExistTemplate"/>
+}
+
+<ng-template #letterExistTemplate>
+  @if(letterAttributeObj(); as letterAttribute){
+    <div class="attributes-container">
+      <div class="label-container">
+        <span class="big-letter correct-color">{{ letterAttribute?.cyrillicLetter | textCapitalize: true}}</span>
+        <div class="preview-container">
+          <img class="label-img"
+               [src]="letterAttribute.url"
+               alt="imgForLetter">
+          <span class="preview-main-word">{{ letterAttribute?.mainWord | textCapitalize: false}}</span>
+        </div>
+      </div>
+
+      <span>Найдите (кликните) букву <span class="correct-letter correct-color">{{ letterAttribute?.cyrillicLetter }}</span> в слове:</span>
+      <div class="word-container">
+        @for (letter of wordByLetterList; track $index) {
+          <span class="letter"
+                [class.correct-color]="isCorrectLetter($index)"
+                (click)="onClickLetter(letter, $index)">
+            {{ letter }}
+          </span>
+        }
+        @if (messageForToast){
+          <button class="btn btn-sm toast"
+                  [ngClass]="messageForToast === toastMessageEnum.CORRECT ? 'toast-correct' : 'toast-incorrect'"
+          >{{ messageForToast }}</button>
+        }
+      </div>
+    </div>
+  }
+</ng-template>

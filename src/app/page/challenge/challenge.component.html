@@ -1,0 +1,9 @@
+<img class="icon-back"
+     src="/assets/imgs/icons/back-icon.svg"
+     alt="back-icon"
+     [routerLink]="['']">
+<section class="main-section">
+  <router-outlet></router-outlet>
+  <app-alphabet [alphabetList]="alphabetList()"></app-alphabet>
+</section>
+

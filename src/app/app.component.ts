@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {AlphabetService} from './shared/alphabet/service/alphabet.service';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'testFromSbasePro-ABC';
+
+  constructor(private a: AlphabetService) {
+
+  }
 }
