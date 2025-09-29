@@ -1,5 +1,6 @@
 import {LetterAttributeDTO, Letter} from './letter-attribute';
 
+// Тестовые данные. Список объектов алфавита
 export const ALPHABET_LIST: Letter[] = [
   {id: Math.random(), cyrillicLetter: 'Аа', latinLetter: 'a'},
   {id: Math.random(), cyrillicLetter: 'Бб', latinLetter: 'b'},
@@ -35,6 +36,7 @@ export const ALPHABET_LIST: Letter[] = [
   {id: Math.random(), cyrillicLetter: 'Яя', latinLetter: 'ya'}
 ];
 
+// Тестовые данные. Список объектов из атрибутов для одной буквы
 export const ALPHABET_WORD_DATA: LetterAttributeDTO[] = [
   {
     id: 0,

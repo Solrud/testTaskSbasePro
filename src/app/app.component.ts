@@ -9,9 +9,4 @@ import {AlphabetService} from './shared/alphabet/service/alphabet.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'testFromSbasePro-ABC';
-
-  constructor(private a: AlphabetService) {
-
-  }
 }

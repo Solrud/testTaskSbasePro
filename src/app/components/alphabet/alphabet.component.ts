@@ -10,7 +10,7 @@ import {RouterLink} from '@angular/router';
   templateUrl: './alphabet.component.html',
   styleUrl: './alphabet.component.css'
 })
-export class AlphabetComponent {
+export class AlphabetComponent { // Компонент для вывода всего алфавита
   readonly alphabetList = input.required<Letter[]>();
 
   isLetterCorrect(latinLetter: Letter['latinLetter']): boolean {

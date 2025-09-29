@@ -18,17 +18,19 @@ import {AlphabetComponent} from '../../components/alphabet/alphabet.component';
     style: 'display: flex; justify-content: center; align-items: center; height: 100dvh; width: 100%;'
   }
 })
-export class ChallengeComponent implements OnInit{
+export class ChallengeComponent implements OnInit{ // Компонент страницы игры
   private readonly alphabetService = inject(AlphabetService);
   private readonly eventService = inject(EventService);
 
-  readonly alphabetList = signal<Letter[]>([]);
+  readonly alphabetList = signal<Letter[]>([]); // Сигнал со значением всего полученного алфавита
 
+  // Выполнение методов при инициализации
   ngOnInit() {
     this.getAllAlphabet();
     this.subscribeCorrectLetter();
   };
 
+  // Получение всего алфавита с "псевдо бека"
   getAllAlphabet(): void {
     this.alphabetService.getAlphabet()
       .subscribe({
@@ -36,6 +38,7 @@ export class ChallengeComponent implements OnInit{
       })
   };
 
+  // Подписка на выборку верной буквы
   subscribeCorrectLetter(): void {
     this.eventService.correctLetter$
       .subscribe({
@@ -45,6 +48,7 @@ export class ChallengeComponent implements OnInit{
       })
   };
 
+  // Добавление правильно выбранных букв в массив ls
   pushCorrectLettersInLS(value: LetterAttribute): void {
     let lsCorrectList = localStorage.getItem(CORRECT_LETTER_KEY);
 

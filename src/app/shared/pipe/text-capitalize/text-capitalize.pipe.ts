@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+// Пайп для верного регистра символов в строке
 @Pipe({
   name: 'textCapitalize'
 })

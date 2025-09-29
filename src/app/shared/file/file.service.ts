@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+// Сервис для открытия какого-либо файла
 @Injectable({
   providedIn: 'root'
 })

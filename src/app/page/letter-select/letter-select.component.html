@@ -1,12 +1,15 @@
+<!--Если есть какая-либо ошибка показывать только ее-->
 @if (errorMessage(); as errorMsg) {
   <h1>{{ errorMsg }}</h1>
 } @else {
+<!--Если нет ошибки - показывать темплейт с "игрой"-->
   <ng-container [ngTemplateOutlet]="letterExistTemplate"/>
 }
-
+<!--Темплейт для атрибутов и "игры"-->
 <ng-template #letterExistTemplate>
   @if(letterAttributeObj(); as letterAttribute){
     <div class="attributes-container">
+      <!--Контейнер с буквой, картинкой, и main словом начинающимся с этой буквы-->
       <div class="label-container">
         <span class="big-letter correct-color">{{ letterAttribute?.cyrillicLetter | textCapitalize: true}}</span>
         <div class="preview-container">
@@ -16,9 +19,11 @@
           <span class="preview-main-word">{{ letterAttribute?.mainWord | textCapitalize: false}}</span>
         </div>
       </div>
-
+      <!--Текст с указанием действия-->
       <span>Найдите (кликните) букву <span class="correct-letter correct-color">{{ letterAttribute?.cyrillicLetter }}</span> в слове:</span>
+      <!-- Контейнер с выпавшим словом для буквы-->
       <div class="word-container">
+        <!--Отображение слова состояшее из span букв-->
         @for (letter of wordByLetterList; track $index) {
           <span class="letter"
                 [class.correct-color]="isCorrectLetter($index)"
@@ -26,6 +31,7 @@
             {{ letter }}
           </span>
         }
+        <!--Для отображение уведомления о правильности выбранной буквы?-->
         @if (messageForToast){
           <button class="btn btn-sm toast"
                   [ngClass]="messageForToast === toastMessageEnum.CORRECT ? 'toast-correct' : 'toast-incorrect'"
